@@ -14,7 +14,8 @@ const forecast = (latitude, longitude, callback) => {
                 forecastData: body.weather[0].description.toUpperCase() + '. It is currently ' + body.main.temp + ' degrees out and it feels like ' + body.main.feels_like + ' degrees.',
                 icon: 'http://openweathermap.org/img/w/' + body.weather[0].icon + '.png',
                 min_temp: body.main.temp_min,
-                max_temp: body.main.temp_max
+                max_temp: body.main.temp_max,
+                humidity: body.main.humidity
             })
         }
     })
